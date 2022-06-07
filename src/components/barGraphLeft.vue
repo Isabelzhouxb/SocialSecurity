@@ -21,7 +21,7 @@ export default {
       const CubeLeft = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           // canvas，shape是从custom传入的
@@ -37,13 +37,13 @@ export default {
             .lineTo(c2[0], c2[1])
             .lineTo(c3[0], c3[1])
             .closePath()
-        },
+        }
       })
       // 绘制右侧面
       const CubeRight = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           const xAxisPoint = shape.xAxisPoint
@@ -57,13 +57,13 @@ export default {
             .lineTo(c3[0], c3[1])
             .lineTo(c4[0], c4[1])
             .closePath()
-        },
+        }
       })
       // 绘制顶面
       const CubeTop = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           const c1 = [shape.x, shape.y]
@@ -76,14 +76,14 @@ export default {
             .lineTo(c3[0], c3[1])
             .lineTo(c4[0], c4[1])
             .closePath()
-        },
+        }
       })
       // 注册三个面图形
       echarts.graphic.registerShape('CubeLeft', CubeLeft)
       echarts.graphic.registerShape('CubeRight', CubeRight)
       echarts.graphic.registerShape('CubeTop', CubeTop)
       const dataTime = [
-        2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112,
+        2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112
       ]
       const dataX = [320, 280, 350, 220, 270, 280, 310, 205, 230, 290, 215, 260]
       const dataY = [53, 40, 48, 52, 46, 38, 48, 52, 45, 47, 53, 43]
@@ -94,13 +94,13 @@ export default {
           left: '3%',
           right: '4%',
           bottom: '5%',
-          containLabel: true,
+          containLabel: true
         },
         // 数据区域缩放。目前只支持直角坐标系的缩放
         dataZoom: {
           show: false,
           start: 0,
-          end: 100,
+          end: 100
         },
         // 提示框组件
         tooltip: {
@@ -113,7 +113,7 @@ export default {
           textStyle: {
             color: '#BCE9FC',
             fontSize: 16,
-            align: 'left',
+            align: 'left'
           },
           formatter: function (params) {
             // console.log(params)
@@ -126,51 +126,51 @@ export default {
               dataY[params[0].dataIndex] +
               '%'
             )
-          },
+          }
         },
         legend: {
           top: '20',
           left: '20% ',
           textStyle: {
             fontSize: 16,
-            color: '#8C8C8B',
+            color: '#8C8C8B'
           },
           itemWidth: 8, // 设置宽度
           itemHeight: 8, // 设置高度、
-          itemGap: 12, // 设置间距
+          itemGap: 12 // 设置间距
         },
         xAxis: {
           type: 'category',
           boundaryGap: true,
-          data: dataTime,
+          data: dataTime
         },
         yAxis: [
           {
             name: '金额（万元）',
             type: 'value',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               textStyle: {
-                color: '#8C8C8B',
-              },
+                color: '#8C8C8B'
+              }
             },
             axisLine: {
               lineStyle: {
                 fontSize: 12,
-                color: 'rgba(66, 192, 255, .3)',
-              },
-            },
+                color: 'rgba(66, 192, 255, .3)'
+              }
+            }
           },
           {
             type: 'value',
             name: '同比(%)',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             max: '100',
             min: '0',
@@ -178,21 +178,21 @@ export default {
             position: 'right',
             axisLine: {
               lineStyle: {
-                color: 'rgba(66, 192, 255, .3)',
-              },
+                color: 'rgba(66, 192, 255, .3)'
+              }
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               show: true,
               formatter: '{value}', // 右侧Y轴文字显示
               textStyle: {
                 fontSize: 12,
-                color: '#8C8C8B',
-              },
-            },
-          },
+                color: '#8C8C8B'
+              }
+            }
+          }
         ],
         series: [
           {
@@ -213,20 +213,20 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: api.coord([api.value(0), 0]),
+                      xAxisPoint: api.coord([api.value(0), 0])
                     },
                     style: {
                       fill: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                           offset: 0,
-                          color: '#33BCEB',
+                          color: '#33BCEB'
                         },
                         {
                           offset: 1,
-                          color: '#337CEB',
-                        },
-                      ]),
-                    },
+                          color: '#337CEB'
+                        }
+                      ])
+                    }
                   },
                   {
                     type: 'CubeRight',
@@ -236,20 +236,20 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: api.coord([api.value(0), 0]),
+                      xAxisPoint: api.coord([api.value(0), 0])
                     },
                     style: {
                       fill: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                           offset: 0,
-                          color: '#28A2CE',
+                          color: '#28A2CE'
                         },
                         {
                           offset: 1,
-                          color: '#1A57B7',
-                        },
-                      ]),
-                    },
+                          color: '#1A57B7'
+                        }
+                      ])
+                    }
                   },
                   {
                     type: 'CubeTop',
@@ -259,24 +259,24 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: api.coord([api.value(0), 0]),
+                      xAxisPoint: api.coord([api.value(0), 0])
                     },
                     style: {
                       fill: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                           offset: 0,
-                          color: '#43C4F1',
+                          color: '#43C4F1'
                         },
                         {
                           offset: 1,
-                          color: '#28A2CE',
-                        },
-                      ]),
-                    },
-                  },
-                ],
+                          color: '#28A2CE'
+                        }
+                      ])
+                    }
+                  }
+                ]
               }
-            },
+            }
           },
           {
             name: '同比',
@@ -289,15 +289,15 @@ export default {
               normal: {
                 color: '#023795',
                 borderColor: '#023795', // 圆点透明 边框
-                borderWidth: 5,
-              },
+                borderWidth: 5
+              }
             },
             lineStyle: {
-              color: '#023795',
+              color: '#023795'
             },
-            data: dataY,
-          },
-        ],
+            data: dataY
+          }
+        ]
       }
       let count = 2113
       setInterval(function () {
@@ -314,8 +314,8 @@ export default {
       }, 2100)
       // 使用刚指定的配置项和数据显示图表。
       // this.myChart.setOption(option)
-    },
-  },
+    }
+  }
 }
 </script>
 

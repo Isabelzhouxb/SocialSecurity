@@ -244,14 +244,14 @@ export default {
     barGraphLeft,
     barGraphMiddle,
     barGraphRight,
-    ballChart,
+    ballChart
   },
-  data() {
+  data(){
     return {
       style: {
         width: `${this.w}px`,
         height: `${this.h}px`,
-        transform: 'scale(1) translate(-50%, -50%)', // 默认不缩放，垂直水平居中
+        transform: 'scale(1) translate(-50%, -50%)' // 默认不缩放，垂直水平居中
       },
       // head里的时间
       dateTime: '2021-03-17 11:19',
@@ -263,7 +263,7 @@ export default {
         img4: require('../img/01_75.png'),
         img5: require('../img/01_44.png'),
         img6: require('../img/01_62.png'),
-        img7: require('../img/01.png'),
+        img7: require('../img/01.png')
       },
       // list里面每一个的title
       listItemContentTitle: {
@@ -273,7 +273,7 @@ export default {
         titleSumPer: '缴费总人数 ',
         titleRate: '征缴率 ',
         titleSup: '补缴金额 ',
-        titleRef: '退费金额 ',
+        titleRef: '退费金额 '
       },
       // 每个list对应的数据（前面的数字或百分比）
       listItemContentStatic: {
@@ -283,26 +283,26 @@ export default {
         staticSumPer: '34.56',
         staticRate: '96%',
         staticSup: '243.6',
-        staticRef: '34.56',
+        staticRef: '34.56'
       },
       // 每个list对应的上升或下降的比率（红色和绿色）
       listItemContentRate: {
         up: '+2.5%',
-        down: '-0.2%',
-      },
+        down: '-0.2%'
+      }
     }
   },
   props: {
     w: {
       // 设计图尺寸宽
       type: Number,
-      default: 1920,
+      default: 1920
     },
     h: {
       // 设计图尺寸高
       type: Number,
-      default: 1080,
-    },
+      default: 1080
+    }
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.onresize)
@@ -341,8 +341,8 @@ export default {
     // 设置缩放比例
     setScale() {
       this.style.transform = `scale(${this.getScale()}) translate(-50%, -50%)`
-    },
-  },
+    }
+  }
 }
 </script>
 

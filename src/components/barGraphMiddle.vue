@@ -26,7 +26,7 @@ export default {
         '2109',
         '2110',
         '2111',
-        '2112',
+        '2112'
       ]
       const dataCity = [18, 22, 31, 32, 25, 26, 29, 19, 36, 35, 23, 41]
       const dataUnem = [29, 35, 17, 28, 36, 27, 18, 42, 27, 36, 28, 36]
@@ -43,7 +43,7 @@ export default {
           textStyle: {
             color: '#BCE9FC',
             fontSize: 16,
-            align: 'left',
+            align: 'left'
           },
           formatter: function (params) {
             // console.log(params)
@@ -59,7 +59,7 @@ export default {
               dataOffice[params[0].dataIndex] +
               '%'
             )
-          },
+          }
         },
         // 图例组件
         legend: {
@@ -67,17 +67,17 @@ export default {
           left: '20% ',
           textStyle: {
             fontSize: 16,
-            color: '#8C8C8B',
+            color: '#8C8C8B'
           },
           itemWidth: 8, // 设置宽度
           itemHeight: 8, // 设置高度、
-          itemGap: 12, // 设置间距
+          itemGap: 12 // 设置间距
         },
         grid: {
           left: '3%',
           right: '4%',
           bottom: '5%',
-          containLabel: true,
+          containLabel: true
         },
         xAxis: {
           type: 'category',
@@ -91,49 +91,49 @@ export default {
               color: '#8C8C8B',
               fontStyle: 'normal',
               fontFamily: '微软雅黑',
-              fontSize: 12,
-            },
+              fontSize: 12
+            }
           },
           axisTick: {
-            show: false,
+            show: false
           },
           axisLine: {
             lineStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
               // opacity:0.2
-            },
+            }
           },
           splitLine: {
-            show: false,
-          },
+            show: false
+          }
         },
         yAxis: [
           {
             name: '缴税率（%）',
             type: 'value',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               textStyle: {
-                color: '#8C8C8B',
-              },
+                color: '#8C8C8B'
+              }
             },
             axisLine: {
               lineStyle: {
                 fontSize: 12,
-                color: 'rgba(66, 192, 255, .3)',
-              },
-            },
+                color: 'rgba(66, 192, 255, .3)'
+              }
+            }
           },
           {
             type: 'value',
             name: '同比(%)',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             max: '100',
             min: '0',
@@ -141,21 +141,21 @@ export default {
             position: 'right',
             axisLine: {
               lineStyle: {
-                color: 'rgba(66, 192, 255, .3)',
-              },
+                color: 'rgba(66, 192, 255, .3)'
+              }
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               show: true,
               formatter: '{value}', // 右侧Y轴文字显示
               textStyle: {
                 fontSize: 12,
-                color: '#8C8C8B',
-              },
-            },
-          },
+                color: '#8C8C8B'
+              }
+            }
+          }
         ],
         series: [
           {
@@ -167,23 +167,23 @@ export default {
                 color: '#2F93D7',
                 lineStyle: {
                   color: '#2F93D7',
-                  width: 1,
+                  width: 1
                 },
                 areaStyle: {
                   color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
                     {
                       offset: 0,
-                      color: 'rgba(47,147,215,0)',
+                      color: 'rgba(47,147,215,0)'
                     },
                     {
                       offset: 1,
-                      color: 'rgba(47,147,215,0.5)',
-                    },
-                  ]),
-                },
-              },
+                      color: 'rgba(47,147,215,0.5)'
+                    }
+                  ])
+                }
+              }
             },
-            data: dataCity,
+            data: dataCity
           },
           {
             name: '失业保险',
@@ -194,23 +194,23 @@ export default {
                 color: '#2C9A95',
                 lineStyle: {
                   color: '#2C9A95',
-                  width: 1,
+                  width: 1
                 },
                 areaStyle: {
                   color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
                     {
                       offset: 0,
-                      color: 'rgba(44,154,149,0)',
+                      color: 'rgba(44,154,149,0)'
                     },
                     {
                       offset: 1,
-                      color: 'rgba(44,154,149,0.5)',
-                    },
-                  ]),
-                },
-              },
+                      color: 'rgba(44,154,149,0.5)'
+                    }
+                  ])
+                }
+              }
             },
-            data: dataUnem,
+            data: dataUnem
           },
           {
             name: '机关养老',
@@ -221,33 +221,33 @@ export default {
                 color: '#A61F36',
                 lineStyle: {
                   color: '#A61F36',
-                  width: 1,
+                  width: 1
                 },
                 areaStyle: {
                   color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
                     {
                       offset: 0,
-                      color: 'rgba(166,31,54,0)',
+                      color: 'rgba(166,31,54,0)'
                     },
                     {
                       offset: 1,
-                      color: 'rgba(166,31,54,0.5)',
-                    },
-                  ]),
-                },
-              },
+                      color: 'rgba(166,31,54,0.5)'
+                    }
+                  ])
+                }
+              }
             },
-            data: dataOffice,
-          },
-        ],
+            data: dataOffice
+          }
+        ]
       }
       // 使用刚指定的配置项和数据显示图表。
       this.myChart.setOption(option)
-    },
+    }
   },
   beforeDestroy() {
     this.myChart.dispose()
-  },
+  }
 }
 </script>
 

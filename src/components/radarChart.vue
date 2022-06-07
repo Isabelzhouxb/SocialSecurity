@@ -44,7 +44,7 @@ export default {
         { name: '失业保险' },
         { name: '工伤保险' },
         { name: '城职养老' },
-        { name: '城居养老' },
+        { name: '城居养老' }
       ]
       // 指定图表的配置项和数据
       const option = {
@@ -59,7 +59,7 @@ export default {
           textStyle: {
             color: '#BCE9FC',
             fontSize: 16,
-            align: 'left',
+            align: 'left'
           },
           formatter: function (params) {
             let tip = dataTitle[params.dataIndex]
@@ -78,7 +78,7 @@ export default {
               tip += '</div>'
             })
             return tip
-          },
+          }
         },
         color: ['#5470C6', '#E39853'],
         // 图例组件
@@ -91,8 +91,8 @@ export default {
           left: 20,
           textStyle: {
             fontSize: 14,
-            color: '#7A848E',
-          },
+            color: '#7A848E'
+          }
         },
         // 雷达图坐标系组件，只适用于雷达图
         radar: {
@@ -108,9 +108,9 @@ export default {
                 'rgba(0,96,208, 0.4)',
                 'rgba(0,96,208, 0.6)',
                 'rgba(0,96,208, 0.8)',
-                'rgba(0,96,208, 1)',
-              ].reverse(),
-            },
+                'rgba(0,96,208, 1)'
+              ].reverse()
+            }
           },
           name: {
             textStyle: {
@@ -118,9 +118,9 @@ export default {
               fontSize: 16,
               fontWeight: 200,
               fontFamily: 'PingFangSC-Regular,PingFang SC',
-              fontStyle: 'normal',
-            },
-          },
+              fontStyle: 'normal'
+            }
+          }
         },
         series: [
           {
@@ -140,25 +140,25 @@ export default {
                       colorStops: [
                         {
                           offset: 0,
-                          color: 'rgba(46,203,255, 0.14)', // 0% 处的颜色
+                          color: 'rgba(46,203,255, 0.14)' // 0% 处的颜色
                         },
                         {
                           offset: 0.15,
-                          color: 'rgba(46,203,255, 0.14)', // 100% 处的颜色
+                          color: 'rgba(46,203,255, 0.14)' // 100% 处的颜色
                         },
                         {
                           offset: 0.75,
-                          color: 'rgba(46,203,255, 0.4)', // 100% 处的颜色
+                          color: 'rgba(46,203,255, 0.4)' // 100% 处的颜色
                         },
                         {
                           offset: 1,
-                          color: 'rgba(46,203,255, 0.5)', // 100% 处的颜色
-                        },
+                          color: 'rgba(46,203,255, 0.5)' // 100% 处的颜色
+                        }
                       ],
-                      global: false, // 缺省为 false
-                    },
-                  },
-                },
+                      global: false // 缺省为 false
+                    }
+                  }
+                }
               },
               {
                 value: valueRec,
@@ -173,40 +173,40 @@ export default {
                       colorStops: [
                         {
                           offset: 0,
-                          color: 'rgba(255, 127,0, 0.14)', // 0% 处的颜色
+                          color: 'rgba(255, 127,0, 0.14)' // 0% 处的颜色
                         },
                         {
                           offset: 0.15,
-                          color: 'rgba(255, 127,0, 0.14)', // 100% 处的颜色
+                          color: 'rgba(255, 127,0, 0.14)' // 100% 处的颜色
                         },
                         {
                           offset: 0.75,
-                          color: 'rgba(2255, 127,0, 0.4)', // 100% 处的颜色
+                          color: 'rgba(2255, 127,0, 0.4)' // 100% 处的颜色
                         },
                         {
                           offset: 1,
-                          color: 'rgba(255, 127,0, 0.5)', // 100% 处的颜色
-                        },
+                          color: 'rgba(255, 127,0, 0.5)' // 100% 处的颜色
+                        }
                       ],
-                      global: false, // 缺省为 false
-                    },
-                  },
-                },
-              },
-            ],
-          },
-        ],
+                      global: false // 缺省为 false
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
       }
       // 使用刚指定的配置项和数据显示图表。
       this.myChart.setOption(option)
-    },
+    }
   },
   mounted() {
     this.radarChart()
   },
   beforeDestroy() {
     this.myChart.dispose()
-  },
+  }
 }
 </script>
 

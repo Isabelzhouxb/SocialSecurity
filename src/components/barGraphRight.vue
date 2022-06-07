@@ -18,7 +18,7 @@ export default {
       const CubeLeft = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           const xAxisPoint = shape.xAxisPoint
@@ -32,13 +32,13 @@ export default {
             .lineTo(c2[0], c2[1])
             .lineTo(c3[0], c3[1])
             .closePath()
-        },
+        }
       })
       // 绘制右侧面
       const CubeRight = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           const xAxisPoint = shape.xAxisPoint
@@ -52,13 +52,13 @@ export default {
             .lineTo(c3[0], c3[1])
             .lineTo(c4[0], c4[1])
             .closePath()
-        },
+        }
       })
       // 绘制顶面
       const CubeTop = echarts.graphic.extendShape({
         shape: {
           x: 0,
-          y: 0,
+          y: 0
         },
         buildPath: function (ctx, shape) {
           const c1 = [shape.x + 7, shape.y]
@@ -71,7 +71,7 @@ export default {
             .lineTo(c3[0], c3[1])
             .lineTo(c4[0], c4[1])
             .closePath()
-        },
+        }
       })
       // 注册三个面图形
       echarts.graphic.registerShape('CubeLeft', CubeLeft)
@@ -90,15 +90,15 @@ export default {
         '2109',
         '2110',
         '2111',
-        '2112',
+        '2112'
       ]
       // 补缴数据
       const dataSupSta = [
-        342, 312, 268, 255, 198, 327, 388, 190, 220, 278, 341, 266,
+        342, 312, 268, 255, 198, 327, 388, 190, 220, 278, 341, 266
       ]
       // 退缴数据
       const dataReSta = [
-        258, 189, 145, 267, 290, 210, 320, 350, 210, 280, 240, 110,
+        258, 189, 145, 267, 290, 210, 320, 350, 210, 280, 240, 110
       ]
       // 补缴百分比
       const dataSupRate = [40, 46, 58, 32, 43, 63, 49, 53, 55, 58, 62, 66]
@@ -115,7 +115,7 @@ export default {
           textStyle: {
             color: '#BCE9FC',
             fontSize: 16,
-            align: 'left',
+            align: 'left'
           },
           formatter: function (params) {
             // console.log(params)
@@ -133,62 +133,62 @@ export default {
               dataReRate[params[0].dataIndex] +
               '%'
             )
-          },
+          }
         },
         grid: {
           left: '3%',
           right: '4%',
           bottom: '5%',
-          containLabel: true,
+          containLabel: true
         },
         legend: {
           top: '20',
           left: '20% ',
           textStyle: {
             fontSize: 16,
-            color: '#8C8C8B',
+            color: '#8C8C8B'
           },
           itemWidth: 8, // 设置宽度
           itemHeight: 8, // 设置高度、
-          itemGap: 12, // 设置间距
+          itemGap: 12 // 设置间距
         },
         xAxis: {
           type: 'category',
           splitLine: {
-            show: false,
+            show: false
           },
           axisTick: {
-            show: false,
+            show: false
           },
-          data: dataTime,
+          data: dataTime
         },
         yAxis: [
           {
             name: '金额（万元）',
             type: 'value',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               textStyle: {
-                color: '#8C8C8B',
-              },
+                color: '#8C8C8B'
+              }
             },
             axisLine: {
               lineStyle: {
                 fontSize: 12,
-                color: 'rgba(66, 192, 255, .3)',
-              },
-            },
+                color: 'rgba(66, 192, 255, .3)'
+              }
+            }
           },
           {
             type: 'value',
             name: '同比(%)',
             nameTextStyle: {
-              color: '#8C8C8B',
+              color: '#8C8C8B'
             },
             max: '100',
             min: '0',
@@ -196,20 +196,20 @@ export default {
             position: 'right',
             axisLine: {
               lineStyle: {
-                color: 'rgba(66, 192, 255, .3)',
-              },
+                color: 'rgba(66, 192, 255, .3)'
+              }
             },
             splitLine: {
-              show: false,
+              show: false
             },
             axisLabel: {
               show: true,
               textStyle: {
                 fontSize: 12,
-                color: '#8C8C8B',
-              },
-            },
-          },
+                color: '#8C8C8B'
+              }
+            }
+          }
         ],
         series: [
           {
@@ -223,13 +223,13 @@ export default {
               normal: {
                 color: '#023795',
                 borderColor: '#023795', // 圆点透明 边框
-                borderWidth: 5,
-              },
+                borderWidth: 5
+              }
             },
             lineStyle: {
-              color: '#023795',
+              color: '#023795'
             },
-            data: dataSupRate,
+            data: dataSupRate
           },
           {
             name: '退缴同比',
@@ -242,13 +242,13 @@ export default {
               normal: {
                 color: '#912C40',
                 borderColor: '#912C40', // 圆点透明 边框
-                borderWidth: 5,
-              },
+                borderWidth: 5
+              }
             },
             lineStyle: {
-              color: '#023795',
+              color: '#023795'
             },
-            data: dataReRate,
+            data: dataReRate
           },
           {
             type: 'custom',
@@ -263,12 +263,12 @@ export default {
                 [
                   {
                     offset: 0,
-                    color: '#33BCEB',
+                    color: '#33BCEB'
                   },
                   {
                     offset: 1,
-                    color: '#337CEB',
-                  },
+                    color: '#337CEB'
+                  }
                 ]
               )
               const cubeRightStyle = new echarts.graphic.LinearGradient(
@@ -279,16 +279,16 @@ export default {
                 [
                   {
                     offset: 0,
-                    color: '#337CEB',
+                    color: '#337CEB'
                   },
                   {
                     offset: 1,
-                    color: '#091365',
-                  },
+                    color: '#091365'
+                  }
                 ]
               )
               const cubeTopStyle = {
-                color: '#33BCEB',
+                color: '#33BCEB'
               }
               let location = api.coord([api.value(0), api.value(1)])
               location = [location[0] - 10, location[1]]
@@ -305,11 +305,11 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeLeftStyle,
-                    },
+                      fill: cubeLeftStyle
+                    }
                   },
                   {
                     type: 'CubeRight',
@@ -319,11 +319,11 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeRightStyle,
-                    },
+                      fill: cubeRightStyle
+                    }
                   },
                   {
                     type: 'CubeTop',
@@ -333,16 +333,16 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeTopStyle,
-                    },
-                  },
-                ],
+                      fill: cubeTopStyle
+                    }
+                  }
+                ]
               }
             },
-            data: dataSupSta,
+            data: dataSupSta
           },
           {
             type: 'custom',
@@ -357,12 +357,12 @@ export default {
                 [
                   {
                     offset: 0,
-                    color: '#EC667C',
+                    color: '#EC667C'
                   },
                   {
                     offset: 1,
-                    color: '#B5273F',
-                  },
+                    color: '#B5273F'
+                  }
                 ]
               )
               const cubeRightStyle = new echarts.graphic.LinearGradient(
@@ -373,16 +373,16 @@ export default {
                 [
                   {
                     offset: 0,
-                    color: '#D33B56',
+                    color: '#D33B56'
                   },
                   {
                     offset: 1,
-                    color: '#510814',
-                  },
+                    color: '#510814'
+                  }
                 ]
               )
               const cubeTopStyle = {
-                color: '#EC667C',
+                color: '#EC667C'
               }
               let location = api.coord([api.value(0), api.value(1)])
               location = [location[0] + 10, location[1]]
@@ -399,11 +399,11 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeLeftStyle,
-                    },
+                      fill: cubeLeftStyle
+                    }
                   },
                   {
                     type: 'CubeRight',
@@ -413,11 +413,11 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeRightStyle,
-                    },
+                      fill: cubeRightStyle
+                    }
                   },
                   {
                     type: 'CubeTop',
@@ -427,27 +427,27 @@ export default {
                       yValue: api.value(1),
                       x: location[0],
                       y: location[1],
-                      xAxisPoint: location1,
+                      xAxisPoint: location1
                     },
                     style: {
-                      fill: cubeTopStyle,
-                    },
-                  },
-                ],
+                      fill: cubeTopStyle
+                    }
+                  }
+                ]
               }
             },
-            data: dataReSta,
-          },
-        ],
+            data: dataReSta
+          }
+        ]
       }
 
       // 使用刚指定的配置项和数据显示图表。
       this.myChart.setOption(option)
-    },
+    }
   },
   beforeDestroy() {
     this.myChart.dispose()
-  },
+  }
 }
 </script>
 

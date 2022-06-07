@@ -39,8 +39,8 @@ export default {
         { value: 480, name: '失业保险' },
         { value: 122, name: '工伤保险' },
         { value: 260, name: '城职养老' },
-        { value: 330, name: '城居养老' },
-      ],
+        { value: 330, name: '城居养老' }
+      ]
     }
   },
   methods: {
@@ -61,7 +61,7 @@ export default {
             roseType: 'area',
             // 图形样式
             itemStyle: {
-              borderRadius: 1,
+              borderRadius: 1
             },
             data: this.pieData,
             label: {
@@ -76,28 +76,28 @@ export default {
                 name: {
                   fontSize: 16,
                   color: '#999',
-                  lineHeight: 30,
+                  lineHeight: 30
                 },
                 value: {
                   fontSize: 16,
                   color: '#999',
-                  lineHeight: 10,
-                },
-              },
-            },
-          },
-        ],
+                  lineHeight: 10
+                }
+              }
+            }
+          }
+        ]
       }
       // 使用刚指定的配置项和数据显示图表。
       this.myChart.setOption(option)
-    },
+    }
   },
   mounted() {
     this.pieOption()
   },
   beforeDestroy() {
     this.myChart.dispose()
-  },
+  }
 }
 </script>
 

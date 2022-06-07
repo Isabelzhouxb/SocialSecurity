@@ -5,8 +5,8 @@
 import ScreenAdapter from '../components/ScreenAdapter'
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'main',
-  components: { ScreenAdapter },
+  name: 'mainView',
+  components: { ScreenAdapter }
 }
 </script>
 

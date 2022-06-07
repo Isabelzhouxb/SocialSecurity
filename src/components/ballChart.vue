@@ -62,10 +62,10 @@ export default {
         { value: '96%', name: '征缴率' },
         { value: '98.6', name: '退缴金额' },
         { value: '155.7', name: '个人缴费金额' },
-        { value: '288.7', name: '单位缴费金额' },
-      ],
+        { value: '288.7', name: '单位缴费金额' }
+      ]
     }
-  },
+  }
 }
 </script>
 
