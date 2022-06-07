@@ -37,7 +37,7 @@ export default {
       // 基于准备好的dom，初始化echarts实例
       this.myChart = echarts.init(this.$refs.radarChart)
       const dataTitle = ['补缴', '退缴']
-      const valueSup = [464, 323, 300, 570, 500]
+      const valueSup = [465, 323, 300, 570, 500]
       const valueRec = [380, 350, 380, 630, 580]
       const list = [
         { name: '机关养老' },
