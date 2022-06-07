@@ -1,0 +1,199 @@
+/* 背景圆环的底图 */
+.ball {
+  height: 440px;
+  border: 0px solid red;
+  background-image: url(../img/ballbottom.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: 50% 50%;
+}
+.img1 {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+.img2 {
+  position: absolute;
+  right: 25%;
+  top: 25%;
+}
+/* 补缴金额 */
+.sup {
+  border: 0px solid red;
+  width: 100px;
+  height: 160px;
+  position: absolute;
+  left: 8%;
+  top: 26%;
+  background-image: url(../img/补缴金额.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 退缴金额 */
+.re {
+  border: 0px solid red;
+  width: 100px;
+  height: 160px;
+  position: absolute;
+  right: 8%;
+  top: 26%;
+  background-image: url(../img/退缴金额.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 蓝色小球的字体样式 */
+.bluetitle {
+  font-weight: bold;
+  font-size: 18px;
+  color: #99bbca;
+  position: absolute;
+  left: 12%;
+  top: 10%;
+}
+/* 橘色小球的字体样式 */
+.oratitle {
+  font-weight: bold;
+  font-size: 18px;
+  color: #f7d28e;
+  position: absolute;
+  left: 12%;
+  top: 10%;
+}
+/* 缴费总人数 */
+.sumnumper {
+  border: 0px solid red;
+  width: 100px;
+  height: 160px;
+  position: absolute;
+  left: 32%;
+  top: 34%;
+  background-image: url(../img/缴费总人数.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 征缴费 */
+.rate {
+  border: 0px solid red;
+  width: 100px;
+  height: 160px;
+  position: absolute;
+  right: 32%;
+  top: 34%;
+  background-image: url(../img/征缴率.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 个人缴费金额 */
+.person {
+  border: 0px solid red;
+  width: 130px;
+  height: 160px;
+  position: absolute;
+  left: 20%;
+  top: 48%;
+  background-image: url(../img/个人补缴金额.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 单位缴费金额 */
+.organization {
+  border: 0px solid red;
+  width: 130px;
+  height: 160px;
+  position: absolute;
+  right: 20%;
+  top: 48%;
+  background-image: url(../img/单位缴费金额.png);
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+}
+/* 橘色浮动大球的整个div */
+.orangecenter {
+  border: 0px solid red;
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  left: 38%;
+  top: 10%;
+}
+/* 橘色浮动大球的title的div */
+.orangecentertitle {
+  border: 0px solid red;
+  height: 50px;
+}
+@-webkit-keyframes bounce-down {
+  25% {
+    -webkit-transform: translateY(-10px);
+  }
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(10px);
+  }
+}
+/* 中间橘色大球图片和图片上的文字 */
+.orangecenterpic {
+  border: 0px solid red;
+  height: 170px;
+  background-image: url(../img/球01.png);
+  background-repeat: no-repeat;
+  background-size: 125%;
+  background-position: 50%;
+  animation: bounce-down 1.8s linear infinite;
+}
+/* 中间浮动大球的title */
+.balltitle {
+  font-weight: bold;
+  font-size: 30px;
+  background: linear-gradient(to bottom, rgb(252, 252, 252), rgb(245, 133, 6));
+  /* -webkit常用于代表chrome、safari私有属性 */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/* 中间浮动大球的数字 */
+.ballnum {
+  font-weight: bold;
+  font-size: 30px;
+  color: #8a2500;
+  position: absolute;
+  left: 35%;
+  top: 27%;
+}
+/* 中间浮动大球的文字 */
+.balldes {
+  font-weight: bold;
+  font-size: 18px;
+  color: #8a2500;
+  position: absolute;
+  left: 32%;
+  top: 48%;
+}
+/* 旋转的圆环 */
+.bgcontain {
+  width: 80%;
+  height: 172%;
+  border: 0px solid red;
+  transform: rotateX(70deg);
+  position: relative;
+  left: 10%;
+  top: -42%;
+}
+.bgcircle {
+  background-image: url(../img/底部.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 0px solid red;
+  width: 100%;
+  height: 100%;
+  animation: rotate 8s linear infinite 0.5s;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}

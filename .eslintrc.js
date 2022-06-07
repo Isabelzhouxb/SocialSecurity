@@ -1,11 +1,17 @@
 module.exports = {
+  // 用来告诉eslint找当前配置文件不能往父级查找
   root: true,
   env: {
-    node: true
+    node: true,
+    commonjs: true,
+    es6: true
   },
   extends: [
     'plugin:vue/essential',
     '@vue/standard'
+  ],
+  plugins: [
+    'vue'
   ],
   parserOptions: {
     parser: '@babel/eslint-parser'

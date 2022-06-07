@@ -1,0 +1,328 @@
+body {
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.screen-adapter {
+  width: 100vw;
+  min-height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  background-size: 100% 100%;
+}
+.screen-adapter .content-wrap {
+  transform-origin: 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* padding: 18px 64px; */
+}
+.el-header {
+  background-image: url(../img/headbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0px solid #ffffff;
+  font-family: SourceHanSansSC-Bold;
+  color: #fefefe;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  display: flex;
+}
+/* head里左边下拉列表 */
+.headleft {
+  border: 0px solid red;
+  width: 20%;
+}
+/* 下拉列表的div */
+.select {
+  width: 140px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #061524;
+  border: solid 1px #134086;
+  text-align: left;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+/* 下拉列表的文字 */
+.select span {
+  font-family: PingFang-SC-Medium;
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  top: 2%;
+  transform: translateY(0%);
+}
+/* 下拉列表的图片 */
+.select img {
+  position: absolute;
+  right: 0%;
+  top: 10%;
+  height: 80%;
+}
+/* 中间橘色大球阴影框里的5个标题外面的div */
+.ballchartlist {
+  width: 55%;
+  height: 100%;
+  border: 0px solid red;
+  color: #ffffff;
+  font-family: PingFang-SC-Bold;
+  font-size: 14px;
+  position: relative;
+  top: -57px;
+  left: 45%;
+  display: flex;
+}
+/* 中间橘色大球阴影框里的5个标题分别的div */
+.ballchartlistitem {
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  border: 0px solid red;
+  color: #ffffff;
+  font-family: PingFang-SC-Bold;
+  font-size: 14px;
+}
+/* head里中间大标题 */
+.headmid {
+  border: 0px solid red;
+  width: 60%;
+}
+/* head里右边时间 */
+.headright {
+  border: 0px solid red;
+  width: 20%;
+}
+.el-main {
+  border: 1px solid #ffffff;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+body > .el-container {
+  margin-bottom: 40px;
+}
+.headDate {
+  float: right;
+  color: #1a64d9;
+  font-family: PingFang-SC-Bold;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #1b67de;
+}
+/* list整行 */
+.list {
+  background-color: rgba(7, 16, 24, 0.7);
+  border: solid 1px #011e3b;
+  height: 100px;
+  margin-top: 30px;
+  width: 1840px;
+  position: relative;
+  display: flex;
+}
+/* list四个边角的样式 */
+.list:after {
+  content: '';
+  width: calc(100% - 24px);
+  height: 100%;
+  position: absolute;
+  left: 12px;
+  top: -1px;
+  bottom: -1px;
+  border-bottom: 1px solid rgba(37, 100, 174, 0.7);
+  border-top: 1px solid rgba(37, 100, 174, 0.7);
+}
+.list:before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 24px);
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 12px;
+  border-left: 1px solid rgba(37, 100, 174, 0.7);
+  border-right: 1px solid rgba(37, 100, 174, 0.7);
+}
+/* 每一个list的div */
+.listItem {
+  margin-left: 16px;
+  width: 245px;
+  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-right: 1px solid;
+  border-image: linear-gradient(white, blue) 30 30;
+  color: white;
+  display: flex;
+}
+.listItemPic {
+  width: 70px;
+}
+.listItemContent {
+  width: 162px;
+  margin-left: 10px;
+  text-align: left;
+  color: #a9b5c0;
+  font-size: 16px;
+}
+.listItemContentTitle {
+  height: 30px;
+}
+.listItemContentStatic {
+  height: 40px;
+  text-align: left;
+}
+.static {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.rateUp {
+  color: red;
+}
+.rateDown {
+  color: green;
+}
+.middle {
+  height: 489px;
+  margin-top: 30px;
+}
+.footer {
+  height: 320px;
+  margin-top: 30px;
+}
+.content {
+  margin-left: 40px;
+  width: 1840px;
+}
+/* 每个阴影div */
+.shadowgb {
+  text-align: left;
+  height: 40px;
+  line-height: 40px;
+  border: 0px solid #ffffff;
+  background-image: linear-gradient(
+    to right,
+    #17395c,
+    rgba(81, 88, 107, 0.144)
+  );
+}
+/* 阴影里的文字 */
+.shadowgb span {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 0%;
+  transform: translateY(0%);
+}
+/* 中间图表的左边和右边那个 */
+.piechart {
+  margin-right: 30px;
+  width: 420px;
+  background-color: rgba(7, 16, 24, 0.7);
+  border: solid 1px #011e3b;
+  position: relative;
+}
+/* piechart四个边角的样式 */
+.piechart:after {
+  content: '';
+  width: calc(100% - 24px);
+  height: 100%;
+  position: absolute;
+  left: 12px;
+  top: 0px;
+  bottom: -1px;
+  border-bottom: 1px solid rgba(37, 100, 174, 0.7);
+  border-top: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.piechart:before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 24px);
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 12px;
+  border-left: 1px solid rgba(37, 100, 174, 0.7);
+  border-right: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.ballchart {
+  background-color: rgba(7, 16, 24, 0.7);
+  border: solid 1px #011e3b;
+  margin-right: 30px;
+  width: 960px;
+  position: relative;
+}
+.ballchart:after {
+  content: '';
+  width: calc(100% - 24px);
+  height: 100%;
+  position: absolute;
+  left: 12px;
+  top: -1px;
+  bottom: -1px;
+  border-bottom: 1px solid rgba(37, 100, 174, 0.7);
+  border-top: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.ballchart:before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 24px);
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 12px;
+  border-left: 1px solid rgba(37, 100, 174, 0.7);
+  border-right: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.linechart {
+  width: 600px;
+  background-color: rgba(7, 16, 24, 0.7);
+  border: solid 1px #011e3b;
+  margin-right: 30px;
+  position: relative;
+}
+.linechart:after {
+  content: '';
+  width: calc(100% - 24px);
+  height: 100%;
+  position: absolute;
+  left: 12px;
+  top: -1px;
+  bottom: -1px;
+  border-bottom: 1px solid rgba(37, 100, 174, 0.7);
+  border-top: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.linechart:before {
+  content: '';
+  width: 100%;
+  height: calc(100% - 24px);
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 12px;
+  border-left: 1px solid rgba(37, 100, 174, 0.7);
+  border-right: 1px solid rgba(37, 100, 174, 0.7);
+  z-index: -1;
+}
+.pie {
+  height: 440px;
+  border: 0px solid red;
+}
+.iconline {
+  height: 100%;
+  margin-left: -12px;
+}
+.icontri {
+  height: 50%;
+  margin-bottom: 10px;
+  margin-left: -12px;
+}

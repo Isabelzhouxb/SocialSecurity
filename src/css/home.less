@@ -1,0 +1,164 @@
+body {
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.screen-adapter {
+  width: 100vw;
+  min-height: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  background-size: 100% 100%;
+  .content-wrap {
+    transform-origin: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 18px 64px;
+  }
+}
+.el-header {
+  background-image: url(../img/headbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ffffff;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+}
+.el-main {
+  border: 1px solid #ffffff;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+}
+body > .el-container {
+  margin-bottom: 40px;
+}
+//head里的日期样式
+.headDate {
+  float: right;
+  color: #1a64d9;
+  font-size: 18px;
+}
+// 整个list那一条
+.list {
+  border: 1px solid #ffffff;
+  height: 100px;
+  margin-top: 30px;
+  width: 1840px;
+  display: flex;
+}
+// list里的每一个div（共7个）
+.listItem {
+  margin-left: 20px;
+  width: 242px;
+  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+}
+// listitem里的头像
+.listItemPic {
+  // border:1px solid #ffffff;
+  width: 70px;
+}
+// listitem里的内容
+.listItemContent {
+  // border:1px solid #ffffff;
+  width: 162px;
+  margin-left: 10px;
+  text-align: left;
+  color: #576067;
+  font-size: 16px;
+  // background:url(../img/line.png) no-repeat;
+  // background-position:right
+}
+// listItemContent里的标题
+.listItemContentTitle {
+  // border:1px solid #ffffff;
+  height: 30px;
+}
+// listItemContent里的数据
+.listItemContentStatic {
+  // border:1px solid #ffffff;
+  height: 40px;
+  text-align: left;
+}
+// list每个span里数据的样式
+.static {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+}
+// 每个list里的static的上升比率的数据样式
+.rateUp {
+  color: red;
+}
+// 每个list里的static的下降比率的数据样式
+.rateDown {
+  color: green;
+}
+// 放饼状图的整个横条
+.middle {
+  height: 489px;
+  margin-top: 30px;
+}
+// 放线状图的整个横条
+.footer {
+  height: 320px;
+  margin-top: 30px;
+}
+// 整个除了head以外的下半部分
+.content {
+  margin-left: 40px;
+  width: 1840px;
+}
+//渐变的标题效果
+.shadowgb {
+  text-align: left;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ffffff;
+  background-image: linear-gradient(
+    to right,
+    #17395c,
+    rgba(81, 88, 107, 0.144)
+  );
+}
+.shadowgb img {
+  height: 100%;
+  float: left;
+  margin-left: -18px;
+}
+.shadowgb span {
+  font-size: 20px;
+  color: white;
+}
+//左右两侧饼状图样式
+.piechart {
+  margin-right: 30px;
+  width: 420px;
+  border: 1px solid #ffffff;
+}
+//中间球状图样式
+.ballchart {
+  border: 1px solid #ffffff;
+  margin-right: 30px;
+  width: 960px;
+}
+//footer里3个折线图linechart的div样式
+.linechart {
+  width: 600px;
+  border: 1px solid #ffffff;
+  margin-right: 30px;
+}
+//饼状图
+.pie {
+  height: 440px;
+  border: 1px solid red;
+}
